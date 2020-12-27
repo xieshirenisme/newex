@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq测试</title>
+</head>
+<style>
+    #div1{
+        width: 200px;
+        height: 200px;
+        background-color: cornflowerblue;
+    }
+</style>
+<body>
+<!-- 测试
+1.点击弹窗
+-->
+<ul>
+    <li></li>
+    <li></li>
+</ul>
+<div onclick="alert('smdx')" id="div1" class="box" title="see ya dear">点击</div>
+
+<script>
+    console.log('亲爱的');
+
+    console.log(document.doctype);          //<!doctype html>
+    console.log(document.documentElement);  //<html>
+    console.log(document.head);             //<head>
+    console.log(document.body);             //<body>
+    console.log(document.title);            //<title>
+
+    //修改头内容
+    document.title = 'toume mydear';        //设置头为toume mydear
+
+    //getElementById()方法获取元素
+    var div = document.getElementById('div1');
+
+    //元素属性操作
+    console.log(div.id);                    //div1
+    console.log(div.className);             //box
+    console.log(div.title);                 //see ya dear
+
+    //获取style中的元素
+    console.log(div.style);                  //获取style属性
+    console.log(div.style.width);            //width
+    console.log(div.style.height);           //height
+    console.log(div.style.background);       //background
+
+    //操作获取的元素
+    div.style.width = '100px';                 //width 100px
+    div.style.height = '100px';                //height 100px
+    div.style.background = 'blue';             //background blue
+
+    //cssText多组方便
+    div.style.cssText = 'width:200px; height:200px; background:pink;';
+
+    //获取最终样式的方法
+    window.getComputedStyle(div)
+    //window窗口对象
+    console.log(window.getComputedStyle(div).backgroundColor);
+    //获取一整个集合
+
+</script>
+</body>
+</html>
