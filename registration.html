@@ -5,6 +5,12 @@
     <title>registration</title>
 </head>
 <style>
+    #div1{
+        background-image: url("img/QQ图片20201230181019.jpg");
+        background-size: 100% 100%;
+        width: 100%;
+        height: 650px;
+    }
     body{
         margin: 0px;
         border-top: 0px;
@@ -19,11 +25,11 @@
         background-image: url("img/u=952998000,3957861121&fm=26&gp=0.jpg");
         background-size: 3.05cm;
         background-repeat: no-repeat;
+        opacity: 70%;
     }
     #bodycen{
-        background-color: pink;
         width: 450px;
-        height: 600px;
+        height: 550px;
         float: right;
         position: relative;
         right: 50px;
@@ -31,6 +37,7 @@
         top: 20px;
     }
     ul,li{
+        color: darkblue;
         margin-bottom: 30px;
         float: right;
         position: relative;
@@ -47,19 +54,52 @@
         left: 170px;
 
     }
+    #fontver{
+        position: relative;
+        right: 110px;
+    }
+    #inpver{
+        position: relative;
+        right: 110px;
+        width: 190px;
+    }
+    #verimg{
+        background-color: azure;
+        width: 100px;
+        height: 40px;
+        position: relative;
+        left: 170px;
+        bottom: 40px;
+    }
+    #font2{
+        position: relative;
+        left: 140px;
+        bottom: 30px;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
 </style>
+
 <body>
-    <div id="headup"></div>
+<div id="headup"></div>
+<div id="div1">
     <div id="bodycen">
-        <ul style="list-style-type: none">
+        <ul style="list-style-type: none; float: left">
             <font id="font1">注册登录</font>
             <li><font>姓名:   </font><input type="text" name="姓名" placeholder="真实姓名"></li>
             <li><font>身份证:  </font><input type="email" status="身份证" placeholder="身份证"></li>
             <li><font>密码:   </font><input type="password" pwd="密码" placeholder="密码"></li>
             <li><font>确认密码: </font><input type="conpassword" conpwd="确认密码" placeholder="确认密码"></li>
-            <li><font>手机:   </font><input type="number" phone="手机" placeholder="手机"></li>
-            <li><font>短信验证: </font><input type="email" verification="短信验证" placeholder="短信验证"></li>
+            <li><font>手机:   </font><input type="email" phone="手机" placeholder="手机"></li>
+            <li><font id="fontver">短信验证: </font><input type="email" verification="短信验证" placeholder="短信验证" id="inpver"><div id="verimg">验证码什么的</div></li>
         </ul>
+        <font id="font2"><button>立即注册</button></font>
     </div>
+</div>
 </body>
+
 </html>
